@@ -7,4 +7,4 @@ for a in range(1,10):
         if i ==9:
             print(*구구단)     
             list.clear(구구단)
-print ("uploading")
+print("check the changes")
