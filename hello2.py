@@ -1,10 +1,19 @@
+class FourCal:
+    def __init__(self,first,second):
+        self.first = first
+        self.second=second
+        #init 처음으로 실행 (무조건)
+    def add(self):
+        result = self.first +self.second
+        return result
 
-구구단=[]
-for a in range(1,10):
-    for i in range(1,10):
-        구구단.insert(i,a*i)   
-        
-        if i ==9:
-            print(*구구단)     
-            list.clear(구구단)
-print("check the changes")
+class MoreFourCal(FourCal):
+    def pow(self):
+        result=self.first**self.second
+        return result
+    def add(self):
+        print("자식")
+
+a=MoreFourCal(1,2)
+#a.setdata(4,2)
+print(a.add())
