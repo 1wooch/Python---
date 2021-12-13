@@ -1,3 +1,12 @@
-def two_times(x):return x*2
-a= list(map(two_times,[1,2,3,4]))
-print(a)
+
+result = []
+def gugu(self):
+    i=1
+    while i<10:
+        x=self*i
+        result.append(x)
+        i+=1
+    
+    return result
+gugu(2)
+print(result)
