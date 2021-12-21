@@ -3,7 +3,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 title=[]
-f=open("x.txt",'w')
+f=open("x.txt",'w',encoding='UTF-8')
 
 
 response=urlopen('https://extmovie.com/movietalk') 
@@ -22,7 +22,9 @@ for anchor in soup.find_all("div",{"class":"title_area"}):#{"class":"title_link"
 for i in title:
     print(i[8:-5])
     #data=i[7:-5]
-    i
+    
     f.write(str(i[8:-5])+"\n")
+    #f.write(i[8:-5]+"\n")
+
     #i.strip("\t")
 
