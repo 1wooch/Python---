@@ -1,13 +1,23 @@
-#!/usr/bin/env python3
-# Anchor extraction from HTML document
+
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
+
 title=[]
+
 f=open("x.txt",'w',encoding='UTF-8')
+
+
+
 
 
 response=urlopen('https://extmovie.com/movietalk') 
 soup = BeautifulSoup(response, 'html.parser')
+
+while True:
+    try:
+        다음페이지 =response.find_element_by_css_selector('')
+    except:
+        break
 #for anchor in soup.select("a.title_link"):
 #for anchor in soup.find_all('div',data-pswp-uid_=True):
 #for anchor in soup.find_all('div',data-pswp-uid_ = true):
