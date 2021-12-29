@@ -19,7 +19,7 @@ def check_fordx():
     # 4DX 여부를 확인하기 위해 개발자도구로 확인하니 4DX는
     # <span class="forDX">4DX</span> 이런식으로 span에 클래스 부여되어 있음
     #fordx = bs.select_one('span.forDX')
-    chatbot = telegram.Bot(token = '5081033456:AAFC9HDCGCdGyvKe2inpuxkHfKSV7Ab1Rww')
+    chatbot = telegram.Bot(token = '')
 
 
     # 타겟: 해당 날짜에 상영중인 영화 목록 하나씩 출력 + <strong> 태그 떼고 출력
