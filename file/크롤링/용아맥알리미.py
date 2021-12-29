@@ -1,5 +1,5 @@
 import datetime
-
+import pytz
 import requests
 from bs4 import BeautifulSoup
 import telegram
@@ -10,8 +10,8 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 def check_fordx():
     # CGV 메인 도메인 + 예매시간표 페이지 iframe 내 자원주소(src)
     url = "http://www.cgv.co.kr/common/showtimes/iframeTheater.aspx?areacode=02&theatercode=0052&date="
-    today = datetime.date.today().strftime("%Y%m%d")
-    url += today
+    #today = datetime.date.today().strftime("%Y%m%d")
+    #url += today
 
     response = requests.get(url)
     bs = BeautifulSoup(response.text, 'html.parser')
@@ -46,12 +46,12 @@ def check_fordx():
         print(result)
 
         for movie in result:
-            chatbot.sendMessage(chat_id= 아이디값, text = movie + " 의 4DX 예매가 오픈되었습니다.")
+            chatbot.sendMessage(chat_id=1054405622, text = movie + " 의 4DX 예매가 오픈되었습니다.")
             # 오픈된 경우 더이상의 수행 및 메시지 발송을 막음
             sc.pause()
 
     else:
-        chatbot.sendMessage(chat_id= 아이디값, text = "아직 오픈된 4DX 예매가 없습니다.")
+        chatbot.sendMessage(chat_id= 1054405622, text = "아직 오픈된 4DX 예매가 없습니다.")
 
 
 

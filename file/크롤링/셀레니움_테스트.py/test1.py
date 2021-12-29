@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
@@ -12,20 +13,30 @@ driver.maximize_window()
 driver.get('https://extmovie.com/movietalk/71696227')
 driver.implicitly_wait(5)
 소진지점=[]
+테스트=""
+
+buttons = driver.find_elements_by_xpath("//*[contains(text(),'이전 댓글')]")
 
 
-while True:
-    try:
-        #더보기=driver.find_element_by_css_selector('div.cmt_page cmt_prev')
-        #더보기=driver.find_element_by_css_selector('bt_cmt_page bt_cmt_prev')
-        #driver.find_element_by_xpath("//button[@onclick=\"prevCmt('2')\"]").click()
-        driver.find_element_by_xpath("//button[@onclick=\"prevCmt('2')\"]").click()
-        time.sleep(1)
-        #더보기.click()
-        #time.sleep(1)
+for btn in buttons:
+    btn.click()
+    time.sleep(2)
 
-    except:
-        break
+# while True:
+#     try:
+#         #더보기=driver.find_element_by_css_selector('div.cmt_page cmt_prev')
+#         #더보기=driver.find_element_by_css_selector('bt_cmt_page bt_cmt_prev')
+#         #driver.find_element_by_xpath("//button[@onclick=\"prevCmt('2')\"]").click()
+#         driver.find_element_by_xpath("//button[@onclick=\"prevCmt('2')\"]").click()
+#        # driver.find_element_by_xpath("//button[@onclick=\"prevCmt('2')\"]").click()
+        
+#         time.sleep(1)
+#         print("1")
+#         #더보기.click()
+#         #time.sleep(1)
+    
+#     except:
+#         break
 
 contents = driver.find_elements_by_css_selector('div.cmt_body')
 for content in contents:
@@ -68,4 +79,4 @@ f.close()
 print("end")
 
 
-driver.close()
+#driver.close()
