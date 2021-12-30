@@ -11,7 +11,7 @@ def check_fordx():
     # CGV 메인 도메인 + 예매시간표 페이지 iframe 내 자원주소(src)
     url = "http://www.cgv.co.kr/common/showtimes/iframeTheater.aspx?areacode=02&theatercode=0052&date="
     #today = datetime.date.today().strftime("%Y%m%d")
-    #url += today
+    #  url += today
 
     response = requests.get(url)
     bs = BeautifulSoup(response.text, 'html.parser')
