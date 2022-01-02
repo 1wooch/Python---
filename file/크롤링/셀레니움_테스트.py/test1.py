@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time 
+import csv
 #from find_text import check_string
 f=open("소진지점.txt",'w',encoding='UTF-8')
 
@@ -15,6 +16,44 @@ driver.implicitly_wait(5)
 소진지점=[] #before sorting
 소진지점2=[] #after sorting by '소진' ,'끝'
 테스트=""
+CGV서울=[]
+CGV경기=[]
+CGV인천=[]
+CGV충남=[]
+CGV대구=[]
+CGV전남=[]
+CGV강원=[]
+CGV부산=[]
+
+CGV서울소진=[]
+CGV경기소진=[]
+CGV인천소진=[]
+CGV충남소진=[]
+CGV대구소진=[]
+CGV전남소진=[]
+CGV강원소진=[]
+CGV부산소진=[]
+CGV=[]
+MegaBox=[]
+LotteCinema=[]
+
+
+with open('cgv.txt','r',encoding='UTF-8') as fd:
+    reader=csv.reader(fd)
+    for row in reader:
+        CGV.append(row)
+CGV서울.extend(CGV[0])
+CGV경기.extend(CGV[1])
+CGV인천.extend(CGV[2])
+CGV충남.extend(CGV[3])
+CGV대구.extend(CGV[4])
+CGV전남.extend(CGV[5])
+CGV강원.extend(CGV[6])
+CGV부산.extend(CGV[7])
+
+
+
+#cgv 지점 등록
 
 while True:
     try:
@@ -72,3 +111,13 @@ print("end")
 
 
 driver.close()
+
+for s1 in CGV서울:
+    for s2 in 소진지점2:
+        if s1 in s2:
+            CGV서울소진.append(s1)
+            print(s2)
+            print(s1)
+
+
+print(CGV서울소진)
