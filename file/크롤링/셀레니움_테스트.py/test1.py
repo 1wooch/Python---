@@ -25,14 +25,30 @@ CGV전남=[]
 CGV강원=[]
 CGV부산=[]
 
-CGV서울소진=[]
-CGV경기소진=[]
-CGV인천소진=[]
-CGV충남소진=[]
-CGV대구소진=[]
-CGV전남소진=[]
-CGV강원소진=[]
-CGV부산소진=[]
+CGV서울소진필름마크=[]
+CGV서울소진아맥포스터=[]
+
+CGV경기소진필름마크=[]
+CGV경기소진아맥포스터=[]
+
+CGV인천소진필름마크=[]
+CGV인천소진아맥포스터=[]
+
+CGV충남소진필름마크=[]
+CGV충남소진아맥포스터=[]
+
+CGV대구소진필름마크=[]
+CGV대구소진아맥포스터=[]
+
+CGV전남소진필름마크=[]
+CGV전남소진아맥포스터=[]
+
+CGV강원소진필름마크=[]
+CGV강원소진아맥포스터=[]
+
+CGV부산소진필름마크=[]
+CGV부산소진아맥포스터=[]
+
 CGV=[]
 MegaBox=[]
 LotteCinema=[]
@@ -115,9 +131,107 @@ driver.close()
 for s1 in CGV서울:
     for s2 in 소진지점2:
         if s1 in s2:
-            CGV서울소진.append(s1)
-            print(s2)
-            print(s1)
+            if '필름마크' in s2:
+                CGV서울소진필름마크.append(s1)
+               
+            elif '아맥포스터' in s2:
+                CGV서울소진아맥포스터.append(s1)
+                
 
 
-print(CGV서울소진)
+print('서울 필름마크 소진지점: ',CGV서울소진필름마크)
+print('서울 아이맥스 포스터 소진지점: ',CGV서울소진아맥포스터)
+
+for s1 in CGV경기:
+    for s2 in 소진지점2:
+        if s1 in s2:
+            if '필름마크' in s2:
+                CGV경기소진필름마크.append(s1)
+              
+            elif '아맥포스터' in s2:
+                CGV경기소진아맥포스터.append(s1)
+
+print('경기 필름마크 소진지점: ',CGV경기소진필름마크)
+print('경기 아이맥스 포스터 소진지점: ',CGV경기소진아맥포스터)
+
+
+for s1 in CGV인천:
+    for s2 in 소진지점2:
+        if s1 in s2:
+            if '필름마크' in s2:
+                CGV인천소진필름마크.append(s1)
+                
+            elif '아맥포스터' in s2:
+                CGV인천소진아맥포스터.append(s1)
+               
+
+print('인천 필름마크 소진지점: ',CGV인천소진필름마크)
+print('인천 아이맥스 포스터 소진지점: ',CGV인천소진아맥포스터)
+
+for s1 in CGV충남:
+    for s2 in 소진지점2:
+        if s1 in s2:
+            if '필름마크' in s2:
+                CGV충남소진필름마크.append(s1)
+                
+            elif '아맥포스터' in s2:
+                CGV충남소진아맥포스터.append(s1) 
+
+
+print('충남 필름마크 소진지점: ',CGV충남소진필름마크)
+print('충남 아이맥스 포스터 소진지점: ',CGV충남소진아맥포스터)
+
+
+for s1 in CGV대구:
+    for s2 in 소진지점2:
+        if s1 in s2:
+            if '필름마크' in s2:
+                CGV대구소진필름마크.append(s1)
+                
+            elif '아맥포스터' in s2:
+                CGV대구소진아맥포스터.append(s1)
+                
+
+
+print('대구 필름마크 소진지점: ',CGV대구소진필름마크)
+print('대구 아이맥스 포스터 소진지점: ',CGV대구소진아맥포스터)
+
+for s1 in CGV전남:
+    for s2 in 소진지점2:
+        if s1 in s2:
+            if '필름마크' in s2:
+                CGV전남소진필름마크.append(s1)
+                
+            elif '아맥포스터' in s2:
+                CGV전남소진아맥포스터.append(s1)
+                
+
+
+print('전남 필름마크 소진지점: ',CGV전남소진필름마크)
+print('전남 아이맥스 포스터 소진지점: ',CGV전남소진아맥포스터)
+
+for s1 in CGV강원:
+    for s2 in 소진지점2:
+        if s1 in s2:
+            if '필름마크' in s2:
+                CGV강원소진필름마크.append(s1)
+                
+            elif '아맥포스터' in s2:
+                CGV강원소진아맥포스터.append(s1)
+               
+
+print('강원 필름마크 소진지점: ',CGV강원소진필름마크)
+print('강원 아이맥스 포스터 소진지점: ',CGV강원소진아맥포스터)
+
+for s1 in CGV부산:
+    for s2 in 소진지점2:
+        if s1 in s2:
+            if '필름마크' in s2:
+                CGV부산소진필름마크.append(s1)
+                
+            elif '아맥포스터' in s2:
+                CGV부산소진아맥포스터.append(s1)
+
+
+print('부산 필름마크 소진지점: ',CGV부산소진필름마크)
+print('부산 아이맥스 포스터 소진지점: ',CGV부산소진아맥포스터)
