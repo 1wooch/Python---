@@ -5,8 +5,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time 
 import csv
+import telegram
 #from find_text import check_string
 f=open("소진지점.txt",'w',encoding='UTF-8')
+
+토큰='5081033456:AAFC9HDCGCdGyvKe2inpuxkHfKSV7Ab1Rww'
+봇 = telegram.Bot(token=토큰)
 
 s=Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=s)
@@ -128,19 +132,26 @@ print("end")
 
 driver.close()
 
-for s1 in CGV서울:
-    for s2 in 소진지점2:
-        if s1 in s2:
-            if '필름마크' in s2:
-                CGV서울소진필름마크.append(s1)
-               
-            elif '아맥포스터' in s2:
-                CGV서울소진아맥포스터.append(s1)
+def 서울소진( ): #in () -> user can put 필름마크 or 아맥 포스터
+  
+    # global 소진지점2
+    # global CGV서울소진아맥포스터
+    # global CGV서울소진필름마크    
+    for s1 in CGV서울:
+        for s2 in 소진지점2:
+            if s1 in s2:
+                if '필름마크' in s2:
+                    CGV서울소진필름마크.append(s1)
                 
+                elif '아맥포스터' in s2:
+                    CGV서울소진아맥포스터.append(s1)
+    print('서울 필름마크 소진지점: ',CGV서울소진필름마크)
+    print('서울 아이맥스 포스터 소진지점: ',CGV서울소진아맥포스터)
 
+        
 
-print('서울 필름마크 소진지점: ',CGV서울소진필름마크)
-print('서울 아이맥스 포스터 소진지점: ',CGV서울소진아맥포스터)
+서울소진()
+
 
 for s1 in CGV경기:
     for s2 in 소진지점2:
