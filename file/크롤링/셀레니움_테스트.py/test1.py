@@ -104,39 +104,46 @@ def check_string():
     for line in datafile:
         
         if '소진' in line:
-            print(line)
+           # print(line)
             소진지점2.append(line)
         elif '끝' in line:
-                print(line)
+               # print(line)
                 소진지점2.append(line)
 
 check_string()
 
 
-print(소진지점2)
+#print(소진지점2)
 f = open('소진지점.txt', 'r+', encoding='UTF8')
 f.truncate(0) # 파일비우기
 data=f.readlines()
-for a in data:
-    print(a) #비워졌는지 체크
+#for a in data:
+    #print(a) #비워졌는지 체크
 
 for element in 소진지점2:
     f.write(element) #텍스트파일에 적기
 
-for line in data:
-    print(line) #채워졌는지 체크
+#for line in data:
+    #print(line) #채워졌는지 체크
 
 f.close()
-print("end")
 
 
 driver.close()
 
+
+# def 지역별소진(region,item):
+#     region.case_name=
+        
+        
+
+
+
+
+
 def 서울소진( ): #in () -> user can put 필름마크 or 아맥 포스터
   
-    # global 소진지점2
-    # global CGV서울소진아맥포스터
-    # global CGV서울소진필름마크    
+
     for s1 in CGV서울:
         for s2 in 소진지점2:
             if s1 in s2:
@@ -145,8 +152,8 @@ def 서울소진( ): #in () -> user can put 필름마크 or 아맥 포스터
                 
                 elif '아맥포스터' in s2:
                     CGV서울소진아맥포스터.append(s1)
-    print('서울 필름마크 소진지점: ',CGV서울소진필름마크)
-    print('서울 아이맥스 포스터 소진지점: ',CGV서울소진아맥포스터)
+    # print('서울 필름마크 소진지점: ',CGV서울소진필름마크)
+    # print('서울 아이맥스 포스터 소진지점: ',CGV서울소진아맥포스터)
 
         
 
@@ -162,8 +169,8 @@ for s1 in CGV경기:
             elif '아맥포스터' in s2:
                 CGV경기소진아맥포스터.append(s1)
 
-print('경기 필름마크 소진지점: ',CGV경기소진필름마크)
-print('경기 아이맥스 포스터 소진지점: ',CGV경기소진아맥포스터)
+# print('경기 필름마크 소진지점: ',CGV경기소진필름마크)
+# print('경기 아이맥스 포스터 소진지점: ',CGV경기소진아맥포스터)
 
 
 for s1 in CGV인천:
@@ -176,8 +183,8 @@ for s1 in CGV인천:
                 CGV인천소진아맥포스터.append(s1)
                
 
-print('인천 필름마크 소진지점: ',CGV인천소진필름마크)
-print('인천 아이맥스 포스터 소진지점: ',CGV인천소진아맥포스터)
+# print('인천 필름마크 소진지점: ',CGV인천소진필름마크)
+# print('인천 아이맥스 포스터 소진지점: ',CGV인천소진아맥포스터)
 
 for s1 in CGV충남:
     for s2 in 소진지점2:
@@ -189,8 +196,8 @@ for s1 in CGV충남:
                 CGV충남소진아맥포스터.append(s1) 
 
 
-print('충남 필름마크 소진지점: ',CGV충남소진필름마크)
-print('충남 아이맥스 포스터 소진지점: ',CGV충남소진아맥포스터)
+# print('충남 필름마크 소진지점: ',CGV충남소진필름마크)
+# print('충남 아이맥스 포스터 소진지점: ',CGV충남소진아맥포스터)
 
 
 for s1 in CGV대구:
@@ -204,8 +211,8 @@ for s1 in CGV대구:
                 
 
 
-print('대구 필름마크 소진지점: ',CGV대구소진필름마크)
-print('대구 아이맥스 포스터 소진지점: ',CGV대구소진아맥포스터)
+# print('대구 필름마크 소진지점: ',CGV대구소진필름마크)
+# print('대구 아이맥스 포스터 소진지점: ',CGV대구소진아맥포스터)
 
 for s1 in CGV전남:
     for s2 in 소진지점2:
@@ -218,8 +225,8 @@ for s1 in CGV전남:
                 
 
 
-print('전남 필름마크 소진지점: ',CGV전남소진필름마크)
-print('전남 아이맥스 포스터 소진지점: ',CGV전남소진아맥포스터)
+# print('전남 필름마크 소진지점: ',CGV전남소진필름마크)
+# print('전남 아이맥스 포스터 소진지점: ',CGV전남소진아맥포스터)
 
 for s1 in CGV강원:
     for s2 in 소진지점2:
@@ -231,8 +238,8 @@ for s1 in CGV강원:
                 CGV강원소진아맥포스터.append(s1)
                
 
-print('강원 필름마크 소진지점: ',CGV강원소진필름마크)
-print('강원 아이맥스 포스터 소진지점: ',CGV강원소진아맥포스터)
+# print('강원 필름마크 소진지점: ',CGV강원소진필름마크)
+# print('강원 아이맥스 포스터 소진지점: ',CGV강원소진아맥포스터)
 
 for s1 in CGV부산:
     for s2 in 소진지점2:
@@ -244,5 +251,31 @@ for s1 in CGV부산:
                 CGV부산소진아맥포스터.append(s1)
 
 
-print('부산 필름마크 소진지점: ',CGV부산소진필름마크)
-print('부산 아이맥스 포스터 소진지점: ',CGV부산소진아맥포스터)
+# print('부산 필름마크 소진지점: ',CGV부산소진필름마크)
+# print('부산 아이맥스 포스터 소진지점: ',CGV부산소진아맥포스터)
+
+class 굿즈소진:
+    class 지역필름마크소진:
+        def __init__(self):
+            self.서울='서울 필름마크 소진지점: ',''.join(CGV서울소진필름마크)
+            self.부산='부산 필름마크 소진지점: ',str(CGV부산소진필름마크)
+            self.경기='경기 필름마크 소진지점: ',CGV경기소진필름마크
+            self.인천='인천 필름마크 소진지점: ',CGV인천소진필름마크
+            self.강원='강원 필름마크 소진지점: ',CGV강원소진필름마크
+            self.전남='전남 필름마크 소진지점: ',CGV전남소진필름마크
+            self.충남='충남 필름마크 소진지점: ',CGV충남소진필름마크
+            self.대구='대구 필름마크 소진지점: ',CGV대구소진필름마크
+    class 지역아이맥스포스터소진:
+        def __init__(self):
+            self.서울='서울 아이맥스 소진지점: ',CGV서울소진아맥포스터
+            self.부산='부산 아이맥스 소진지점: ',CGV부산소진아맥포스터
+            self.경기='경기 아이맥스 소진지점: ',CGV경기소진아맥포스터
+            self.인천='인천 아이맥스 소진지점: ',CGV인천소진아맥포스터
+            self.강원='강원 아이맥스 소진지점: ',CGV강원소진아맥포스터
+            self.전남='전남 아이맥스 소진지점: ',CGV전남소진아맥포스터
+            self.충남='충남 아이맥스 소진지점: ',CGV충남소진아맥포스터
+            self.대구='대구 아이맥스 소진지점: ',CGV대구소진아맥포스터
+지역필름마크=굿즈소진().지역필름마크소진()
+지역아맥포스터=굿즈소진().지역아이맥스포스터소진()
+print(getattr(지역필름마크,'서울')) #replace 지역필름마크 as button choose 필름마크 그리고 '서울'은 입력값 혹은 지역선택으로 바꾸기
+print(getattr(지역아맥포스터,'서울')) #""
